@@ -50,15 +50,18 @@ app.use(helmet({
             ],
             imgSrc:      [
                 "'self'", "data:", "blob:",
-                "https://*.tile.openstreetmap.org",
                 "https://*.basemaps.cartocdn.com",
-                "https://*.openstreetmap.org"
+                "https://*.tile.openstreetmap.org",
+                "https://*.openstreetmap.org",
+                "https://unpkg.com"
             ],
             connectSrc:  [
                 "'self'",
-                "https://*.tile.openstreetmap.org",
                 "https://*.basemaps.cartocdn.com",
-                "https://*.openstreetmap.org"
+                "https://*.tile.openstreetmap.org",
+                "https://*.openstreetmap.org",
+                "https://nominatim.openstreetmap.org",
+                "https://router.project-osrm.org"
             ],
             mediaSrc:    ["'self'", "blob:", "data:"],
             workerSrc:   ["'self'", "blob:"],
@@ -114,6 +117,11 @@ app.get('/api/health', (req, res) => {
         timestamp: new Date().toISOString(),
         env: process.env.NODE_ENV || 'development'
     });
+});
+
+// Config endpoint — exposes safe public config to frontend
+app.get('/api/config', (req, res) => {
+    res.json({ mapsApiKey: process.env.GOOGLE_MAPS_API_KEY || '' });
 });
 
 // API 404
