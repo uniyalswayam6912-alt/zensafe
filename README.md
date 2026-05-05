@@ -1,4 +1,4 @@
-# 🛡️ ZENSAFE – AI-Powered Smart Safety Navigation
+# 🛡️ ZENSAFE – Smart Safety Navigation
 
 A full-stack, deployment-ready safety navigation web app with real-time fear scoring, SOS alerts, guardian tracking, and a community safety map.
 
