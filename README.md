@@ -7,6 +7,14 @@ A full-stack, deployment-ready safety navigation web app with real-time fear sco
 ## 🚀 Live Demo  
 👉 https://zensafe-appp-production.up.railway.app
 
+## 📸 Screenshots
+
+### 🗺️ Route & Safety Map
+![Map](route.png)
+
+### 🔥 Emergency SOS
+![Heatmap](emergency.png)
+
 ## 🚀 Quick Start (Local)
 
 ```bash
